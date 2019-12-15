@@ -1,41 +1,62 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Casha [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/casha/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/casha)
 
-My awesome module.
+Convert between currencies.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/casha.png)](https://npmjs.com/package/casha)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install casha
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const casha = require("casha");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+    await casha(10, "nzd", "usd")
+    //=> 6.622414507999999
+})()
 ```
 
 ## API
 
-### theModule(input, options?)
+### casha(amount, from, to, options?)
 
-#### input
+#### amount
 
-Type: `string`
+Type: `number`
 
-Lorem ipsum.
+The amount to convert.
+
+#### from
+
+Type: `number`
+
+The currency to convert from.
+
+#### to
+
+Type: `number`
+
+The currency to convert to.
 
 #### options
 
 Type: `object`
 
-##### postfix
+##### date
 
-Type: `string`\
-Default: `rainbows`
+Type: `string | number | Date | instanceof dayjs`\
+Default: `latest`
 
-Lorem ipsum.
+The date to get the currency conversion information for.
+
+##### precision
+
+Type: `number`\
+Default: `2`
+
+The precision to round the number to.
