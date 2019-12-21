@@ -17,7 +17,7 @@ const casha = require("casha");
 
 (async () => {
     await casha(10, "nzd", "usd")
-    //=> 6.622414507999999
+    //=> 6.6
 })()
 ```
 
@@ -60,3 +60,16 @@ Type: `number`\
 Default: `2`
 
 The precision to round the number to.
+
+##### provider
+
+Type: `string` (exchangeratesapi, fixer, currencylayer, openexchangerates)\
+Default: `exchangeratesapi`
+
+The conversion rate provider to use.
+
+##### apiKey
+
+Type: `string`
+
+The key/token/id to pass to the API (if any).

@@ -27,6 +27,17 @@ declare function casha(amount: number, from: string, to: string, options?: {
      * @default 2
     */
     precision?: number
+
+    /**
+     * The conversion rate provider to use.
+     * @default "exchangeratesapi"
+    */
+    provider?: "exchangeratesapi" | "fixer" | "currencylayer" | "openexchangerates"
+
+    /**
+     * The key/token/id to pass to the API (if any).
+    */
+    apiKey?: string
 }): Promise<number>;
 
 export = casha;
