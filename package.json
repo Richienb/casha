@@ -25,18 +25,18 @@
         "rates"
     ],
     "dependencies": {
-        "@sindresorhus/is": "^1.2.0",
         "cashify": "^2.1.1",
         "dayjs": "^1.8.18",
         "ky": "^0.16.1",
         "ky-universal": "^0.3.0",
         "map-obj": "^4.1.0",
+        "ow": "^0.15.0",
         "p-memoize": "^3.1.0",
         "round-to": "^4.0.0"
     },
     "devDependencies": {
+        "@sindresorhus/is": "^1.2.0",
         "ava": "^2.4.0",
-        "decpl": "^1.0.0",
         "eslint-config-richienb": "^0.2.3",
         "xo": "^0.25.3"
     },

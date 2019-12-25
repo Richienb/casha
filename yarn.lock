@@ -1205,11 +1205,6 @@ decompress-response@^3.3.0:
   dependencies:
     mimic-response "^1.0.0"
 
-decpl@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/decpl/-/decpl-1.0.0.tgz#126b32cb4252659bb7ed3e9304afa9670b37e20e"
-  integrity sha512-QfDuzXH96ntjp/RoiRQ/taF76sU1wfG7pQ9hgSsCTNEcw/y0g/fUB/B2oPaMrGQzPUlAlWsFfN+lFKLUFm0xYQ==
-
 deep-equal@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.1.1.tgz#b5c98c942ceffaf7cb051e24e1434a25a2e6076a"
@@ -3407,6 +3402,13 @@ os-tmpdir@^1.0.1, os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
+
+ow@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/ow/-/ow-0.15.0.tgz#0d928046989422d7b06f0d6f20017016a0373df5"
+  integrity sha512-iHHqr8OXsZzBjUkOVxfSR8opBhEhdQUGE4mxZEWehQawHxhCcnnGXrfu6+HhLG3XTK+oHRD/dlfGwNdY9HTHxQ==
+  dependencies:
+    type-fest "^0.8.1"
 
 p-cancelable@^1.0.0:
   version "1.1.0"

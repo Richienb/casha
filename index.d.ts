@@ -1,4 +1,4 @@
-import dayjs from "dayjs"
+import { ConfigType } from "dayjs"
 
 /**
  * Convert between currencies.
@@ -20,7 +20,7 @@ declare function casha(amount: number, from: string, to: string, options?: {
      * The date to get the currency conversion information for.
      * @default latest
     */
-    date?: dayjs.ConfigType
+    date?: ConfigType
 
     /**
      * The precision to round the number to.
