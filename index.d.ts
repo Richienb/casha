@@ -38,6 +38,6 @@ declare function casha(amount: number, from: string, to: string, options?: {
      * The key/token/id to pass to the API (if any).
     */
     apiKey?: string
-}): Promise<number>;
+}): Promise<number>
 
-export = casha;
+export = casha

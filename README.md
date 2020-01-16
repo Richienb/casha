@@ -16,7 +16,7 @@ npm install casha
 const casha = require("casha");
 
 (async () => {
-    await casha(10, "nzd", "usd")
+    await casha(10, "nzd", "usd");
     //=> 6.6
 })()
 ```
