@@ -63,7 +63,7 @@ The precision to round the number to.
 
 ##### provider
 
-Type: `string` (exchangeratesapi, fixer, currencylayer, openexchangerates)\
+Type: `string` (`exchangeratesapi`, `fixer`, `currencylayer` or `openexchangerates`)\
 Default: `exchangeratesapi`
 
 The conversion rate provider to use.
@@ -73,3 +73,7 @@ The conversion rate provider to use.
 Type: `string`
 
 The key/token/id to pass to the API (if any).
+
+## Migrating from v1
+
+- Node.js 10 or later is required.
