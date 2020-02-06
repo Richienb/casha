@@ -1,6 +1,6 @@
 {
     "name": "casha",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "description": "Convert between currencies.",
     "repository": "https://github.com/Richienb/casha.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
