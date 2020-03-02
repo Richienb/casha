@@ -1,4 +1,5 @@
 import { ConfigType } from "dayjs"
+import { MergeExclusive } from "type-fest"
 
 /**
  * Convert between currencies.
@@ -16,28 +17,33 @@ import { ConfigType } from "dayjs"
  * ```
 */
 declare function casha(amount: number, from: string, to: string, options?: {
-    /**
+	/**
      * The date to get the currency conversion information for.
      * @default latest
     */
     date?: ConfigType
 
-    /**
+	/**
      * The precision to round the number to.
      * @default 2
     */
     precision?: number
-
-    /**
+} & MergeExclusive<{ /**
      * The conversion rate provider to use.
      * @default "exchangeratesapi"
     */
-    provider?: "exchangeratesapi" | "fixer" | "currencylayer" | "openexchangerates"
+    provider?: "exchangeratesapi"
+}, {
+	/**
+     * The conversion rate provider to use.
+     * @default "exchangeratesapi"
+    */
+    provider: "fixer" | "currencylayer" | "openexchangerates"
 
-    /**
+	/**
      * The key/token/id to pass to the API (if any).
     */
-    apiKey?: string
-}): Promise<number>
+    apiKey: string
+}>): Promise<number>
 
 export = casha
