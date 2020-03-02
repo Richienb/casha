@@ -1,50 +1,50 @@
 {
-    "name": "casha",
-    "version": "2.0.0",
-    "description": "Convert between currencies.",
-    "repository": "https://github.com/Richienb/casha.git",
-    "author": "Richie Bendall <richiebendall@gmail.com>",
-    "license": "MIT",
-    "main": "index.js",
-    "files": [
-        "index.js",
-        "index.d.ts"
-    ],
-    "engines": {
-        "node": ">=10"
-    },
-    "scripts": {
-        "lint": "xo",
-        "test": "yarn lint && ava"
-    },
-    "keywords": [
-        "cash",
-        "money",
-        "convert",
-        "conversion",
-        "rates"
-    ],
-    "dependencies": {
-        "cashify": "^2.4.0",
-        "dayjs": "^1.8.21",
-        "ky": "^0.18.0",
-        "ky-universal": "^0.5.0",
-        "map-obj": "^4.1.0",
-        "mem": "^6.0.1",
-        "ow": "^0.17.0",
-        "round-to": "^4.1.0",
-        "type-fest": "^0.11.0"
-    },
-    "devDependencies": {
-        "@sindresorhus/is": "^2.1.0",
-        "ava": "^3.5.0",
-        "eslint-config-richienb": "^0.3.0",
-        "xo": "^0.26.1"
-    },
-    "resolutions": {
-        "eslint": "^6.8.0"
-    },
-    "xo": {
-        "extends": "richienb/node"
-    }
+	"name": "casha",
+	"version": "2.1.0",
+	"description": "Convert between currencies.",
+	"repository": "https://github.com/Richienb/casha.git",
+	"author": "Richie Bendall <richiebendall@gmail.com>",
+	"license": "MIT",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"lint": "xo",
+		"test": "yarn lint && ava"
+	},
+	"keywords": [
+		"cash",
+		"money",
+		"convert",
+		"conversion",
+		"rates"
+	],
+	"dependencies": {
+		"cashify": "^2.4.0",
+		"dayjs": "^1.8.21",
+		"ky": "^0.18.0",
+		"ky-universal": "^0.5.0",
+		"map-obj": "^4.1.0",
+		"mem": "^6.0.1",
+		"ow": "^0.17.0",
+		"round-to": "^4.1.0",
+		"type-fest": "^0.11.0"
+	},
+	"devDependencies": {
+		"@sindresorhus/is": "^2.1.0",
+		"ava": "^3.5.0",
+		"eslint-config-richienb": "^0.3.0",
+		"xo": "^0.26.1"
+	},
+	"resolutions": {
+		"eslint": "^6.8.0"
+	},
+	"xo": {
+		"extends": "richienb/node"
+	}
 }
