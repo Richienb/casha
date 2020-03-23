@@ -555,9 +555,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 cashify@^2.4.0:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/cashify/-/cashify-2.4.1.tgz#2ca05c37a5fbb242c6d2611a3fa4e98f7a26a546"
-  integrity sha512-+vG11iLsdPkFeS6OvNqOQ8112taJwSsgT4BN+JF8tl6qSMNFEAwEo7xrir4KqSZuSFCbZdNoybt4qNGg07kHLQ==
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/cashify/-/cashify-2.4.2.tgz#0bb687c8635a795e4d3b01ef285cbd466e7a233e"
+  integrity sha512-bf9rw60fwg2TlHAyIacGctR26NRZV8G/mW/V4s4qT/8C96klWY+doIbzEAps5NOhoM4hspWSd40Rl7k34DW19w==
 
 chalk@^2.0.0, chalk@^2.1.0, chalk@^2.4.2:
   version "2.4.2"
