@@ -8,7 +8,7 @@ const { default: ow } = require("ow")
 const roundTo = require("round-to")
 const mapObject = require("map-obj")
 
-const isValidDate = (date) => day(date) !== "Invalid Date"
+const isValidDate = date => day(date) !== "Invalid Date"
 
 module.exports = async (amount, from, to, { date = "latest", precision = 2, provider = "exchangeratesapi", apiKey } = {}) => {
 	// `amount` must be a number
@@ -22,10 +22,7 @@ module.exports = async (amount, from, to, { date = "latest", precision = 2, prov
 
 	// `date` must be "latest" or compatible with dayjs
 	ow(date, ow.any(
-		ow.string.is((value) => value === "latest" || isValidDate(value))),
-	ow.number.is(isValidDate),
-	ow.date.is(isValidDate),
-	ow.object.is(isValidDate), // Class
+		ow.string.is(value => value === "latest" || isValidDate(value))), ow.number.is(isValidDate), ow.date.is(isValidDate), ow.object.is(isValidDate) // Class
 	)
 
 	// `precision` must be a number
@@ -39,14 +36,16 @@ module.exports = async (amount, from, to, { date = "latest", precision = 2, prov
 	to = to.toUpperCase()
 
 	// If `date` is not latest, parse it
-	if (date !== "latest") date = day(date).format("YYYY-MM-DD")
+	if (date !== "latest") {
+		date = day(date).format("YYYY-MM-DD")
+	}
 
 	// Conversion `options` object
 	const options = {
 		from,
 		to,
 		base: from,
-		rates: {},
+		rates: {}
 	}
 
 	if (provider === "exchangeratesapi") {
@@ -54,8 +53,8 @@ module.exports = async (amount, from, to, { date = "latest", precision = 2, prov
 		const { rates } = await ky(`https://api.exchangeratesapi.io/${date}`, {
 			searchParams: {
 				base: from,
-				symbols: to,
-			},
+				symbols: to
+			}
 		}).json()
 		options.rates = rates
 	} else if (provider === "fixer") {
@@ -64,8 +63,8 @@ module.exports = async (amount, from, to, { date = "latest", precision = 2, prov
 		const { rates, base } = await ky(`http://data.fixer.io/api/${date}`, {
 			searchParams: {
 				access_key: apiKey,
-				symbols: [from, to],
-			},
+				symbols: [from, to]
+			}
 		}).json()
 		options.rates = rates
 		options.base = base
@@ -75,14 +74,14 @@ module.exports = async (amount, from, to, { date = "latest", precision = 2, prov
 		const { quotes: rates, source: base } = date === "latest" ? await ky("http://apilayer.net/api/live", {
 			searchParams: {
 				access_key: apiKey,
-				currencies: [from, to],
-			},
+				currencies: [from, to]
+			}
 		}).json() : await ky("http://apilayer.net/api/historic", {
 			searchParams: {
 				access_key: apiKey,
 				currencies: [from, to],
-				date,
-			},
+				date
+			}
 		}).json()
 		options.rates = mapObject(rates, (key, value) => [key.slice(3), value])
 		options.base = base
@@ -93,8 +92,8 @@ module.exports = async (amount, from, to, { date = "latest", precision = 2, prov
 			searchParams: {
 				app_id: apiKey,
 				symbols: [from, to],
-				prettyprint: false,
-			},
+				prettyprint: false
+			}
 		}).json()
 		options.rates = rates
 		options.base = base

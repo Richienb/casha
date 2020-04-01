@@ -21,29 +21,29 @@ declare function casha(amount: number, from: string, to: string, options?: {
      * The date to get the currency conversion information for.
      * @default latest
     */
-    date?: ConfigType
+	date?: ConfigType
 
 	/**
      * The precision to round the number to.
      * @default 2
     */
-    precision?: number
+	precision?: number
 } & MergeExclusive<{ /**
      * The conversion rate provider to use.
      * @default "exchangeratesapi"
     */
-    provider?: "exchangeratesapi"
+	provider?: "exchangeratesapi"
 }, {
 	/**
      * The conversion rate provider to use.
      * @default "exchangeratesapi"
     */
-    provider: "fixer" | "currencylayer" | "openexchangerates"
+	provider: "fixer" | "currencylayer" | "openexchangerates"
 
 	/**
      * The key/token/id to pass to the API (if any).
     */
-    apiKey: string
+	apiKey: string
 }>): Promise<number>
 
 export = casha
